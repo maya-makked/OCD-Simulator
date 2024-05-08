@@ -19,7 +19,7 @@ public abstract class IntrusiveThought {
      * Mindful way of breaking OCD cycle
      */
     protected final String ACCEPTANCE =
-            "I wholly accept you as a passing thought with no substance and reality.";
+            "I wholly accept you as a passing thought with no substance.";
     /**
      * Quit message
      */
