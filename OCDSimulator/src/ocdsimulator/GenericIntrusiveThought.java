@@ -1,11 +1,13 @@
 package ocdsimulator;
 
-import java.util.Scanner;
-
+/**
+ * Generic intrusive thought class.
+ */
 public class GenericIntrusiveThought extends IntrusiveThought {
 
-    // Constructor
-    // Creates the array for the intrusive thoughts
+    /**
+     * Puts 12 generic intrusive thoughts in thought subjects array
+     */
     public GenericIntrusiveThought() {
         // Put the thoughts in the thought subject array
         String thought0 = "What if I have a disease that will kill me?";
@@ -42,7 +44,11 @@ public class GenericIntrusiveThought extends IntrusiveThought {
         thoughtSubjects[11] = thought11;
     }
 
-
+    /**
+     * Generates the thought corresponding to thought number
+     * @param thoughtNum Index
+     * @return The thought
+     */
     @Override
     protected String generateThought(int thoughtNum) {
         // Generate thought based on number passed in
@@ -50,7 +56,9 @@ public class GenericIntrusiveThought extends IntrusiveThought {
         return intrusiveThought;
     }
 
-
+    /**
+     * Runs the OCD cycle
+     */
     @Override
     public void obsessionAndCompulsions() {
         // Get obsession
@@ -105,7 +113,11 @@ public class GenericIntrusiveThought extends IntrusiveThought {
 
     }
 
-
+    /**
+     * Gets the associated avoidance compulsion for corresponding obsessive thought
+     * @param thoughtNum Thought's position in array
+     * @return Avoidance compulsion
+     */
     @Override
     protected String getAvoidance(int thoughtNum) {
 
@@ -165,7 +177,11 @@ public class GenericIntrusiveThought extends IntrusiveThought {
         return avoidance;
     }
 
-
+    /**
+     * Gets the associated rationalization compulsion for corresponding obsessive thought
+     * @param thoughtNum Thought's position in array
+     * @return Rationalization compulsion
+     */
     @Override
     protected String getRationalize(int thoughtNum) {
 
@@ -228,7 +244,11 @@ public class GenericIntrusiveThought extends IntrusiveThought {
         return rationalize;
     }
 
-
+    /**
+     * Gets the associated reassurance compulsion for corresponding obsessive thought
+     * @param thoughtNum Thought's position in array
+     * @return Reassurance compulsion
+     */
     @Override
     protected String getReassurance(int thoughtNum) {
 
