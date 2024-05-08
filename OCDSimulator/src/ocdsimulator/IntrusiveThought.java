@@ -2,44 +2,80 @@ package ocdsimulator;
 
 import java.util.Scanner;
 
+/**
+ * Abstract class to represent an intrusive thought.
+ */
 public abstract class IntrusiveThought {
 
-    // Thought subjects
+    /**
+     * Array of thoughts
+     */
     protected String[] thoughtSubjects;
+    /**
+     * Length of thoughts array
+     */
     protected int thoughtSubjectsLength;
+    /**
+     * Mindful way of breaking OCD cycle
+     */
     protected final String ACCEPTANCE =
             "I wholly accept you as a passing thought with no substance and reality.";
+    /**
+     * Quit message
+     */
     protected final String QUIT = "QUIT OCD SIMULATOR";
 
-    // Methods
-    // Choose thought number
+    /**
+     * Generates random number to choose a thought
+     * @return Random number
+     */
     protected int chooseThoughtNumber() {
         int randThoughtNum = (int)(Math.random() * thoughtSubjectsLength);
         return randThoughtNum;
     }
 
-
-    // Generate thought
+    /**
+     * Generates the thought corresponding to thought number
+     * @param thoughtNum Index
+     * @return The thought
+     */
     protected abstract String generateThought(int thoughtNum);
 
 
-    // Produce OCD cycle
+    /**
+     * Runs the OCD cycle
+     */
     public abstract void obsessionAndCompulsions();
 
 
-    // Get avoidance
+    /**
+     * Gets the associated avoidance compulsion for corresponding obsessive thought
+     * @param thoughtNum Thought's position in array
+     * @return Avoidance compulsion
+     */
     protected abstract String getAvoidance(int thoughtNum);
 
 
-    // Get rationalization
+    /**
+     * Gets the associated rationalization compulsion for corresponding obsessive thought
+     * @param thoughtNum Thought's position in array
+     * @return Rationalization compulsion
+     */
     protected abstract String getRationalize(int thoughtNum);
 
 
-    // Get reassurance
+    /**
+     * Gets the associated reassurance compulsion for corresponding obsessive thought
+     * @param thoughtNum Thought's position in array
+     * @return Reassurance compulsion
+     */
     protected abstract String getReassurance(int thoughtNum);
 
 
-    // Validates input for compulsion choice
+    /**
+     * Gets and validates integer input for compulsion selection
+     * @return Compulsion selection
+     */
     protected int validateCompulsionInput() {
         // Input should be between 1-5 inclusive
         Scanner scan = new Scanner(System.in);
