@@ -8,7 +8,7 @@ public abstract class IntrusiveThought {
     protected String[] thoughtSubjects;
     protected int thoughtSubjectsLength;
     protected final String ACCEPTANCE =
-        "I wholly accept you as a passing thought with no substance.";
+            "I wholly accept you as a passing thought with no substance and reality.";
     protected final String QUIT = "QUIT OCD SIMULATOR";
 
     // Methods
