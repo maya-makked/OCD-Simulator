@@ -2,11 +2,20 @@ package ocdsimulator;
 
 import java.util.Scanner;
 
+/**
+ * Intrusive thought class focused on important people.
+ */
 public class ImportantPersonIntrusiveThought extends IntrusiveThought {
 
-    // Order of people are family member, friend, and someone loved
+    /**
+     * Array of user's important people (family member, friend, loved one)
+     */
     private String[] importantPeople;
 
+    /**
+     * Puts important people intrusive thoughts in array
+     * Sets important people
+     */
     public ImportantPersonIntrusiveThought() {
         // Set array of important people, get user input
         int peopleLength = 3;
@@ -33,7 +42,9 @@ public class ImportantPersonIntrusiveThought extends IntrusiveThought {
         thoughtSubjects[4] = thought4;
     }
 
-
+    /**
+     * User sets the important family member, friend, and loved one 
+     */
     protected void setImportantPeople() {
         Scanner scanPeople = new Scanner(System.in);
         // Asks user for people important to them, this is meant to personalize
@@ -61,7 +72,12 @@ public class ImportantPersonIntrusiveThought extends IntrusiveThought {
         System.out.println();
     }
 
-
+    /**
+     * Generates the thought corresponding to thought number
+     * Randomly chooses a person to focus the thought on
+     * @param thoughtNum Index
+     * @return The thought
+     */
     @Override
     protected String generateThought(int thoughtNum) {
         // Generate thought based on number passed in
@@ -75,7 +91,10 @@ public class ImportantPersonIntrusiveThought extends IntrusiveThought {
         return intrusiveThought;
     }
 
-
+    /**
+     * Gets a random person from the person array
+     * @return Random person
+     */
     protected String getPerson() {
         // Get a random person
         int personNum = (int)(Math.random() * importantPeople.length);
@@ -83,7 +102,9 @@ public class ImportantPersonIntrusiveThought extends IntrusiveThought {
         return person;
     }
 
-
+    /**
+     * Runs the OCD cycle
+     */
     @Override
     public void obsessionAndCompulsions() {
         // Get obsession
@@ -138,7 +159,11 @@ public class ImportantPersonIntrusiveThought extends IntrusiveThought {
 
     }
 
-
+    /**
+     * Gets the associated avoidance compulsion for corresponding obsessive thought
+     * @param thoughtNum Thought's position in array
+     * @return Avoidance compulsion
+     */
     @Override
     protected String getAvoidance(int thoughtNum) {
         // Choose associated avoidance
@@ -167,7 +192,11 @@ public class ImportantPersonIntrusiveThought extends IntrusiveThought {
         return avoidance;
     }
 
-
+    /**
+     * Gets the associated rationalization compulsion for corresponding obsessive thought
+     * @param thoughtNum Thought's position in array
+     * @return Rationalization compulsion
+     */
     @Override
     protected String getRationalize(int thoughtNum) {
         // Choose associated rationalization
@@ -202,7 +231,11 @@ public class ImportantPersonIntrusiveThought extends IntrusiveThought {
         return rationalize;
     }
 
-
+    /**
+     * Gets the associated reassurance compulsion for corresponding obsessive thought
+     * @param thoughtNum Thought's position in array
+     * @return Reassurance compulsion
+     */
     @Override
     protected String getReassurance(int thoughtNum) {
         // Choose associated reassurance
