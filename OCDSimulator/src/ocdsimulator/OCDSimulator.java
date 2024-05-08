@@ -7,7 +7,7 @@ package ocdsimulator;
 public class OCDSimulator {
 
     /**
-     * Runs the OCD simulator.
+     * Runs the OCD simulator
      * @param args Args
      */
     public static void main(String[] args) {
