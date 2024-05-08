@@ -1,9 +1,15 @@
 package ocdsimulator;
 
-import java.util.Scanner;
-
+/**
+ * This class runs the OCD simulator, demonstrating the obsessive-compulsive mental pattern
+ * of those with OCD.
+ */
 public class OCDSimulator {
 
+    /**
+     * Runs the OCD simulator.
+     * @param args Args
+     */
     public static void main(String[] args) {
 
         // Display introduction message
