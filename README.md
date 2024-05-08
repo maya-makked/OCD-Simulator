@@ -1,7 +1,7 @@
 # OCD-Simulator
 Simulator for Obsessive-Compulsive Disorder.
 
-This simulator simultates the mind of someone with OCD, an incredibly misunderstood disorder. The simulator's goal is give someone an inside view on how an OCD mind behaves. The point is not to win the simulation, but rather to explore.
+This project simulates the mind of someone with OCD, an incredibly misunderstood disorder. The simulator's goal is give someone an inside view on how an OCD mind behaves. The point is not to win the simulation, but rather to explore.
 
 A person with OCD has obsessions in the form of intrusive thoughts. The thoughts are not the person's real thoughts, leading to great distress. Obsessive intrusive thoughts often attack what a sufferer finds important, such as their morals and the people they care about. To relieve the obsessions, a sufferer performs hard-to-resist compulsions for temporary relief. Compulsions take on many different forms such as action, reassurance, rationalization, avoidance, and more. Unfortunately, compulsions feed obsessions and perpetuate an exhausting OCD cycle. The true way to break an OCD cycle is to accept the intrusive thought as just a passing thought with no substance and reality. Mindfulness is key.
 
