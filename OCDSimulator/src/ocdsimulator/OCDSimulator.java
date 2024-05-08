@@ -14,7 +14,7 @@ public class OCDSimulator {
 
         // Display introduction message
         System.out.println("DESCRIPTION AND BACKGROUND");
-        System.out.println("This simulator simultates the mind of someone with OCD, an incredibly misunderstood disorder. "
+        System.out.println("This simulator simulates the mind of someone with OCD, an incredibly misunderstood disorder. "
             + "\nThe simulator's goal is give someone an inside view on how an OCD mind behaves. The point\nis not to win "
             + "the simulation, but rather to explore.\r\n"
             + "\r\n"
