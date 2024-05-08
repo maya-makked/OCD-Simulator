@@ -38,23 +38,26 @@ public class OCDSimulator {
         // Intrusive thoughts pertaining to important people
         ImportantPersonIntrusiveThought importantPeople =
             new ImportantPersonIntrusiveThought();
+        // Intrusive thoughts pertaining to deep fears
+        DeepFearIntrusiveThought deepFears = new DeepFearIntrusiveThought();
 
         // Run the OCD cycle
         while (true) {
             // Generate a random number to choose a class of intrusive thoughts
-            int thoughtClass = (int)(Math.random() * 2);
-
-            switch (thoughtClass) {
-                case 0:
-                    // Generic instrusive thoughts
-                    generic.obsessionAndCompulsions();
-                    break;
-                case 1:
-                    // Important people intrusive thoughts
-                    importantPeople.obsessionAndCompulsions();
-                    break;
+            int thoughtClass = (int)(Math.random() * 9);
+            
+            //4/9 chance of generic
+            if (thoughtClass >= 0 && thoughtClass < 4) {
+                generic.obsessionAndCompulsions();
             }
-
+            //4/9 chance of important people
+            else if (thoughtClass >= 4 && thoughtClass < 8) {
+                importantPeople.obsessionAndCompulsions();
+            }
+            //1/9 chance for deep fears, as there are only 2 thoughts in this class so there will be more variety
+            else {
+                deepFears.obsessionAndCompulsions();
+            }
         }
 
     }
