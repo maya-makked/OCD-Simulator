@@ -68,7 +68,6 @@ public abstract class IntrusiveThought {
     /**
      * Runs the OCD cycle
      */
-    @Override
     public void obsessionAndCompulsions() {
         // Get obsession
         int thoughtNum = chooseThoughtNumber();
