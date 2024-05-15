@@ -68,7 +68,7 @@ public abstract class IntrusiveThought {
     /**
      * Runs the OCD cycle
      */
-    public void obsessionAndCompulsions() {
+    protected void obsessionAndCompulsions() {
         // Get obsession
         int thoughtNum = chooseThoughtNumber();
         String intrusiveThought = generateThought(thoughtNum);
